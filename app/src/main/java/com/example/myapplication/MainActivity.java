@@ -96,5 +96,13 @@ public class MainActivity extends AppCompatActivity {
             Log.d("REST error", error.getMessage());
         }
     };
+    public static final String EXTRA_MESSAGE = "com.example.myapplication.MESSAGE";
+
+    public void addUserActivity (View view) {
+        Intent intent = new Intent(this,addUser.class);
+        String message = "Add a user.";
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
 
 }
